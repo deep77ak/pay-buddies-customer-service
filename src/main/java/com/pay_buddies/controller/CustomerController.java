@@ -1,6 +1,7 @@
 package com.pay_buddies.controller;
 
 import com.pay_buddies.dto.CustomerDto;
+import com.pay_buddies.exception.CustomerException;
 import com.pay_buddies.model.Customer;
 import com.pay_buddies.service.CustomerDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +22,7 @@ public class CustomerController {
     private CustomerDetailsService customerDetailsService;
 
     @PostMapping("/register")
-    public ResponseEntity<Customer> registerCustomerDetails(@RequestBody CustomerDto customerPayload) {
+    public ResponseEntity<Customer> registerCustomerDetails(@RequestBody CustomerDto customerPayload) throws CustomerException {
         Customer registeredCustomer = customerDetailsService.registerCustomerDetails(customerPayload);
         return new ResponseEntity<>(registeredCustomer, HttpStatus.CREATED);
     };
