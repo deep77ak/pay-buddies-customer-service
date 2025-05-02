@@ -13,7 +13,7 @@ public class PayBuddiesApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(PayBuddiesApplication.class, args);
 
-
+// to do-> customerService update
 //		Customer c = new Customer();
 //		Customer.CustomerBankDetails customerbank = Customer.CustomerBankDetails.builder()
 //				.IFSC("2345").build();

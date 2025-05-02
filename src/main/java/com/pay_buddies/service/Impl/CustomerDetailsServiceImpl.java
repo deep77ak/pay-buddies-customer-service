@@ -2,6 +2,7 @@ package com.pay_buddies.service.Impl;
 
 
 import com.pay_buddies.dto.CustomerDto;
+import com.pay_buddies.exception.CustomerException;
 import com.pay_buddies.model.Customer;
 import com.pay_buddies.repository.CustomerRepository;
 import com.pay_buddies.service.CustomerDetailsService;
@@ -17,7 +18,7 @@ public class CustomerDetailsServiceImpl implements CustomerDetailsService {
     private CustomerRepository customerRepository;
 
     @Override
-    public Customer registerCustomerDetails(CustomerDto customerPayload) {
+    public Customer registerCustomerDetails(CustomerDto customerPayload) throws CustomerException {
 
         Customer customer = generateCustomer(customerPayload);
         return customerRepository.save(customer);
