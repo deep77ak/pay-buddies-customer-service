@@ -79,4 +79,19 @@ public class CustomerDto{
         private Address bankAddress;
     }
 
+    @Data
+    @Builder
+    @NoArgsConstructor
+    @AllArgsConstructor
+    public static class Address{
+        private String houseNumber;
+        private String area;
+        private String landMark;
+        private String city;
+        private String state;
+        private String zipCode;
+        private String country;
+        private String officialLanguage;
+    }
+
 }

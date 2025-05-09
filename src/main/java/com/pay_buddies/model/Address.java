@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 public class Address {
     private String houseNumber;
     private String area;
-    private String landMak;
+    private String landMark;
     private String city;
     private String state;
     private String zipCode;

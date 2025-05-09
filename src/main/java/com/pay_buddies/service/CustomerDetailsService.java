@@ -6,5 +6,5 @@ import com.pay_buddies.model.Customer;
 
 public interface CustomerDetailsService {
     public Customer registerCustomerDetails(CustomerDto customerPayload) throws CustomerException;
-//    public Customer getCustomerByEmail(String emailId);
+    public Customer getCustomerByEmail(String customerId) throws Exception;
 }
